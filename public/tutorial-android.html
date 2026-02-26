@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial - Android | CMTV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e60000;
+            --bg-main: #050505;
+            --bg-box: #0f0f0f;
+            --text-white: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: radial-gradient(circle at center, #1a0505 0%, #050505 100%);
+            color: var(--text-white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+        .navbar {
+            background: rgba(10, 10, 10, 0.9);
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .logo { height: 50px; }
+
+        .tutorial-content {
+            background: var(--bg-box);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            border: 1px solid #1a1a1a;
+        }
+
+        h1 { font-family: 'Archivo Black'; color: var(--primary); text-align: center; margin-bottom: 30px; }
+
+        h2 { color: var(--primary); margin-top: 30px; margin-bottom: 10px; }
+
+        ol { margin-left: 20px; color: var(--text-gray); }
+
+        li { margin-bottom: 10px; }
+
+        .btn-back { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <img src="images/logo.png" alt="CMTV Logo" class="logo">
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="tutorial-content">
+            <h1>Tutorial de Instalação - Android</h1>
+            <p>Há dois aplicativos disponíveis na Play Store para Android: IBO REVENDA e XCIPTV. Escolha um deles e siga as instruções abaixo.</p>
+            
+            <h2>Opção 1: IBO REVENDA</h2>
+            <ol>
+                <li>Baixe o aplicativo "IBO REVENDA" na Google Play Store.</li>
+                <li>Instale o aplicativo no seu dispositivo Android.</li>
+                <li>Abra o aplicativo; o endereço MAC aparecerá na tela inicial.</li>
+                <li>Tire uma foto ou print da tela e envie para o suporte via WhatsApp.</li>
+                <li>Aguarde as instruções para configuração.</li>
+            </ol>
+            <img src="images/iborevenda.png" alt="Logo IBO REVENDA" style="max-width: 200px; border-radius: 10px; margin: 20px 0;">
+            
+            <h2>Opção 2: XCIPTV</h2>
+            <ol>
+                <li>Baixe o aplicativo "XCIPTV" na Google Play Store.</li>
+                <li>Instale o aplicativo no seu dispositivo Android.</li>
+                <li>Solicite ao suporte o DNS do servidor, seu usuário e senha.</li>
+                <li>Abra o aplicativo e configure com as credenciais fornecidas.</li>
+                <li>Agora você pode assistir aos seus canais!</li>
+            </ol>
+            <img src="images/xciptv.png" alt="Logo XCIPTV" style="max-width: 200px; border-radius: 10px; margin: 20px 0;">
+            
+            <p>Se tiver dúvidas, entre em contato conosco pelo WhatsApp.</p>
+            <a href="index.html" class="btn-back">Voltar ao Site</a>
+        </div>
+    </div>
+</body>
+</html>
