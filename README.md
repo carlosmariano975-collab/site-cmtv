@@ -41,3 +41,5 @@ O projeto está estruturado da seguinte forma:
 └── vercel.json      # Regras para o deploy na Vercel
 
 Desenvolvido por Carlos Mariano.
+
+Dê uma olhadinha no projeto rodando aqui: https://sitecmtv.vercel.app/
