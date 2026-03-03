@@ -27,11 +27,17 @@ Google Fonts: Tipografia moderna (Archivo Black e Inter) para passar autoridade 
 O projeto está estruturado da seguinte forma:
 
 ├── public/
-│   ├── images/      # Logos e ícones dos sistemas
+
+│   ├── images/ # Logos e ícones dos sistemas
+
 │   ├── index.html   # Home principal do site
+
 │   ├── style.css    # Toda a estilização e responsividade
+
 │   └── script.js    # Funções de interação do usuário
+
 ├── server.js        # Configuração base do servidor
+
 └── vercel.json      # Regras para o deploy na Vercel
 
 Desenvolvido por Carlos Mariano.
