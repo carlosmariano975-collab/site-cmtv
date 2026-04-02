@@ -2,8 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+const path = require('path');
 
 const app = express();
+
+// Servir arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Rate limiting: máximo 2 requests por IP por hora
 const limiter = rateLimit({
@@ -61,6 +65,11 @@ app.post('/api', (req, res) => {
   const link = `https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent(msg)}`;
 
   res.status(200).json({ whatsappLink: link });
+});
+
+// Servir index.html para rotas que não existem (SPA)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 module.exports = app;
