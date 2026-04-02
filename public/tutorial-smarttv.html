@@ -28,9 +28,18 @@
 
         .navbar {
             background: rgba(10, 10, 10, 0.9);
-            padding: 10px 0;
-            text-align: center;
+            padding: 15px 0;
             border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
         }
 
         .logo { height: 50px; }
@@ -51,13 +60,19 @@
 
         li { margin-bottom: 10px; }
 
-        .btn-back { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        .btn-back { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: 0.3s; }
+        .btn-back:hover { filter: brightness(1.2); }
+        
+        .navbar .btn-back { margin: 0; padding: 10px 20px; font-size: 12px; font-weight: 700; }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">
+        <a href="index.html" class="navbar-logo">
             <img src="images/logo.png" alt="CMTV Logo" class="logo">
+        </a>
+        <a href="index.html#aplicativos" class="btn-back">Voltar ao Site</a>
+    </nav>
         </a>
     </nav>
 

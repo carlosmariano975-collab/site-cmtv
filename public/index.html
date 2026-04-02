@@ -197,6 +197,134 @@
             60% {transform: translateY(-4px);}
         }
 
+        /* FAQ - ACCORDEÃO */
+        .faq-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(230, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        .faq-section h2 {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--bg-box);
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: var(--primary);
+        }
+        .faq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+        .faq-header:hover {
+            background: rgba(230, 0, 0, 0.1);
+        }
+        .faq-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--text-white);
+        }
+        .faq-arrow {
+            font-size: 20px;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .faq-item.active .faq-content {
+            max-height: 500px;
+        }
+        .faq-content p {
+            padding: 0 25px 25px 25px;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #000000;
+            border-top: 2px solid var(--primary);
+            padding: 60px 0 20px 0;
+            margin-top: 100px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+        .footer-logo p {
+            color: var(--text-gray);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .footer-section h4 {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+        .footer-section ul li a:hover {
+            color: var(--primary);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #1a1a1a;
+            color: var(--text-gray);
+            font-size: 12px;
+        }
+
         /* RESPONSIVIDADE */
         @media (max-width: 992px) {
             .about-grid { grid-template-columns: 1fr; text-align: center; }
@@ -215,6 +343,9 @@
             .app-card { padding: 30px 15px; }
             .planos-section { padding: 80px 0; }
             .card { width: 100%; max-width: 320px; }
+            .faq-section h2 { font-size: 28px; }
+            .faq-header h3 { font-size: 14px; }
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
 </head>
@@ -340,6 +471,133 @@
         </div>
     </section>
 
+    <!-- FAQ - PERGUNTAS FREQUENTES -->
+    <section id="faq" class="faq-section container">
+        <h2>PERGUNTAS <span class="text-red">FREQUENTES</span></h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>O que é IPTV?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>IPTV significa Internet Protocol Television, ou seja, é a transmissão de TV pela internet. Em vez de depender de antenas ou cabos para receber o sinal, você recebe todo o conteúdo através da sua conexão de banda larga. Com a CMTV, você tem acesso a canais ao vivo em qualidade 4K e Full HD com total estabilidade.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Qual a diferença entre IPTV e streaming normal (Netflix)?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>A principal diferença é o conteúdo. IPTV oferece canais ao vivo (como TV tradicional) - Esportes, Notícias, Filmes em tempo real. Já serviços de streaming como Netflix oferecem conteúdo sob demanda (você escolhe quando assistir). A CMTV combina o melhor dos dois: canais ao vivo + biblioteca gigante de filmes e séries!</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>É legal usar IPTV?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>IPTV em si é uma tecnologia completamente legal. O que precisa ser legal é o conteúdo oferecido. A CMTV opera dentro da legalidade, oferecendo conteúdo licenciado e autorizado. Sempre tenha cuidado com provedores não autorizados que oferecem conteúdo pirateado.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Quais são os requisitos de internet para usar IPTV?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>Recomendamos uma conexão de banda larga com no mínimo 10 Mbps para Full HD e 25 Mbps para 4K. Quanto melhor sua conexão, melhor será a qualidade e estabilidade do sinal. A CMTV funciona tanto em Wi-Fi quanto em conexão cabeada (ethernet).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Funciona em Smart TV?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>Sim! A CMTV funciona em praticamente todas as Smart TVs modernas: Samsung, LG, ROKU, LG, TCL, Philco e muitas outras. Também funciona perfeitamente em dispositivos como Android TV, Fire TV, Apple TV e em qualquer TV tradicional conectada a uma set-top box Android.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Posso usar IPTV em vários dispositivos ao mesmo tempo?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>Sim, você pode usar sua conta em múltiplos dispositivos! A quantidade de conexões simultâneas depende do seu plano. Geralmente, os planos permitem entre 2 e 4 telas ligadas ao mesmo tempo. Consulte as características do seu plano para mais detalhes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>E se a internet cair? Perco o sinal?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>Sim, IPTV depende 100% de uma conexão ativa com a internet. Se sua internet cair, o sinal também será interrompido. Por isso recomendamos uma conexão estável e confiável. A CMTV oferece tecnologia de compressão avançada que minimiza problemas de buffering mesmo com conexões moderadas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <h3>Qual é a qualidade da transmissão?</h3>
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-content">
+                    <p>A qualidade varia de acordo com sua conexão e o conteúdo. A CMTV oferece transmissões em até 4K Ultra HD para conteúdos suportados, Full HD (1080p) para a maioria dos canais, e HD (720p) como padrão mínimo. Quanto melhor sua internet, melhor será a qualidade que você conseguirá acessar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="CMTV Logo">
+                    <p>A melhor experiência de TV online do Brasil. Estabilidade, qualidade e variedade garantidas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#conheca">Tecnologia</a></li>
+                        <li><a href="#aplicativos">Aplicativos</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Aplicativos</h4>
+                    <ul>
+                        <li><a href="tutorial-android.html" target="_blank">Android</a></li>
+                        <li><a href="tutorial-smarttv.html" target="_blank">Smart TV</a></li>
+                        <li><a href="tutorial-pc.html" target="_blank">Computador</a></li>
+                        <li><a href="tutorial-ios.html" target="_blank">iOS / Apple</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="https://wa.me/5587991394036" target="_blank">WhatsApp</a></li>
+                        <li><a href="#faq">Dúvidas?</a></li>
+                        <li><a href="#planos">Contratar Plano</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CMTV - Todos os direitos reservados. | Streaming com Estabilidade</p>
+            </div>
+        </div>
+    </footer>
+
     <div class="whatsapp-wrapper">
         <div class="whatsapp-tooltip">Teste Grátis aqui!</div>
         <a href="https://wa.me/5587991394036?text=Olá!%20Quero%20meu%20teste%20grátis" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
@@ -348,6 +606,22 @@
     </div>
 
     <script src="scripts.js"></script>
+    <script>
+        function toggleFaq(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Fechar todos os items
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Abrir o item clicado (se não estava aberto)
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
   </html>
